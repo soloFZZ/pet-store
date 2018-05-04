@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container">
+ <view class="header">
+    <view class="header_left">
+      <text class="header_left_title">马可波罗瓷砖</text>
+      <text class="header_left_des">陶瓷中的世界名作</text>
+    </view>
+    <image class="logo" mode="heightFix" src="../images/logo.jpg"></image>
+    <image class="bottom-dotted" src="../images/bottom-dotted.png"></image>
+  </view>
+  <view class='shop-news'>
+    <view class='shop-address list-news' bindtap="getMap">
+      <image class='icon-address' src='../images/address.svg'></image>
+      <text class='title'>泾阳县中心街西关小学向西20米</text>
+      <image class='next-right' src='../images/next-right.svg'></image>
+    </view>
+    <view class='shop-time list-news'>
+      <image class='icon-time' src='../images/time.svg'></image>
+      <text class='title number-title'>8:00-21:00</text>
+      <image class='next-right next-right-none' src='../images/next-right.svg'></image>
+    </view>
+    <view class='shop-phone list-news' bindtap='clickPhone'>
+      <image class='icon-phone' src='../images/phone.svg'></image>
+      <text class='title number-title'>02936228486</text>
+      <image class='next-right' src='../images/next-right.svg'></image>
+    </view>
+    <view class='shop-veido list-news' wx:if="{{vedio_url_list.length>0}}">
+      <image class='icon-vedio' src='../images/vedio.svg'></image>
+      <text class='title'>门店视频</text>
+      <text class="show-all" wx:if="{{!vedio_all}}" bindtap='showAllVedio'>展开全部</text>
+      <text class="show-all" wx:else bindtap='showAllVedio'>点击收起</text>
+    </view> 
+    <view class="audio-content" wx:if="{{vedio_url_list.length>0}}">
+       <video class="myVideo"   wx:if="{{index<2 || vedio_all}}" wx:key="{{index}}" wx:for="{{vedio_url_list}}" src="{{item}}" controls ></video>
+    </view>
+    <view class='shop-veido list-news'>
+      <image class='icon-picture' src='../images/picture.svg'></image>
+      <text class='title'>门店照片</text>
+      <text class="show-all" wx:if="{{!images_all}}" bindtap='showAllImages'>展开全部</text>
+      <text class="show-all" wx:else bindtap='showAllImages'>点击收起</text>
+    </view>
+    <view class="picture-content">
+      <view class="picture-item" wx:if="{{index<6 || images_all}}" wx:key="{{index}}" wx:for="{{img_url_list}}" bindtap="clickImage" data-src="{{item}}">
+      <image class='picture' mode="widthFix" src="{{item}}"></image>
+      </view>
+      
+    </view>
+  </view>
+</view>

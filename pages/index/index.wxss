@@ -1,0 +1,140 @@
+/**index.wxss**/
+.header {
+  position:relative;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 48rpx;
+  align-items: flex-start;
+  padding: 60rpx 20rpx 120rpx；
+}
+.header_left {
+  height: 100%;
+}
+.header_left_title {
+  display: block;
+  font-size: 48rpx;
+  line-height:84rpx;
+  height: 100%;
+}
+.header_left_des {
+  display: block;
+  width: 100%;
+  font-size: 24rpx;
+  color:#b3b3b3;
+}
+.logo {
+  width: 170rpx;
+  height: 170rpx;
+  margin-top:-14rpx;
+  margin-bottom: 4rpx;
+}
+.bottom-dotted {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4rpx;
+}
+.shop-news {
+  width: 100%;
+}
+.list-news {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24rpx;
+  height: 62rpx;
+  overflow:hidden;
+}
+.next-right {
+  width: 48rpx;
+  height: 64rpx;
+  margin-right: -14rpx;
+}
+.icon-address {
+  width: 48rpx;
+  height: 64rpx;
+  margin-left: -8rpx;
+}
+.icon-time {
+  width: 36rpx;
+  height: 50rpx;
+   margin-right: -16rpx;
+}
+.icon-phone {
+  width: 42rpx;
+  height: 50rpx;
+   margin-right: -16rpx;
+}
+.icon-vedio {
+  width: 36rpx;
+  height: 50rpx;
+  margin-right: -16rpx;
+}
+.icon-picture {
+  width:50rpx;
+  height: 40rpx;
+  margin-right: -16rpx;
+}
+.next-right-none {
+  opacity: 0;
+}
+.list-news .title{
+  font-size: 32rpx;
+  width:85%;
+  padding-left: 24rpx;
+}
+.list-news .number-title {
+  padding-left: 38rpx;
+}
+.shop-time .icon{
+  width: 40rpx;
+  height: 48rpx;
+}
+.show-all {
+  font-size: 32rpx;
+  color: #597595;
+  text-align: right;
+}
+.shop-veido {
+   margin-bottom: 25rpx;
+}
+.shop-veido .title {
+  width: 67%;
+  
+}
+.audio-content {
+  width: 100%;
+
+  margin-top: 20rpx;
+}
+.myVideo {
+  width: 100%;
+  height: 381rpx;
+}
+.picture-content {
+  width: 100%;
+  
+   -moz-column-count:3; /* Firefox */
+        -webkit-column-count:3; /* Safari 和 Chrome */
+        column-count:3;
+        -moz-column-gap: 18rpx;
+      -webkit-column-gap: 18rpx;
+      column-gap: 18rpx;
+}
+.picture-item {
+      margin: 0 0 18rpx 0;
+      -moz-page-break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      break-inside: avoid;
+}
+.picture-item img{
+        width: 100%;
+        margin-bottom:10px;
+    }
+.picture-content .picture {
+  width: 200rpx;
+  height: auto;
+}
