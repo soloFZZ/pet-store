@@ -43,26 +43,26 @@ Page({
         }
       })
     }
-    // wx.request({
-    //   url: 'https://makeboluocizhuan-1256631861.cos.ap-chengdu.myqcloud.com',
-    //   success: function (res) {
-    //     var arr = res.data.match(/<Key>[^]*?<\/Key>+/g);
-    //     for (let i = 0; i < arr.length; i++) {
-    //       let file_name = arr[i].slice(5, -6);
-    //       if (file_name.lastIndexOf('.jpeg') > -1 || file_name.lastIndexOf('.jpg') > -1 || file_name.lastIndexOf('.png') > -1 || file_name.lastIndexOf('.gif') > -1) {
-    //         temp_img_url_arr.push("https://makeboluocizhuan-1256631861.cos.ap-chengdu.myqcloud.com/" + file_name);
-    //       } else if (file_name.lastIndexOf('.mp4') > -1 || file_name.lastIndexOf('.avi') > -1 || file_name.lastIndexOf('.rmvb') > -1 || file_name.lastIndexOf('.flash') > -1 || file_name.lastIndexOf('.mkv') > -1) {
-    //         temp_vedio_url_arr.push("https://makeboluocizhuan-1256631861.cos.ap-chengdu.myqcloud.com/" + file_name)
-    //       }
-    //     }
-    //     that.setData({
-    //       img_url_list: temp_img_url_arr,
-    //       vedio_url_list: temp_vedio_url_arr
-    //     })
-    //   },
-    //   fail: function (error) {
-    //   }
-    // })
+    wx.request({
+      url:'https://pet-store-1256628689.cos.ap-chengdu.myqcloud.com',
+      success: function (res) {
+        var arr = res.data.match(/<Key>[^]*?<\/Key>+/g);
+        for (let i = 0; i < arr.length; i++) {
+          let file_name = arr[i].slice(5, -6);
+          if (file_name.lastIndexOf('.jpeg') > -1 || file_name.lastIndexOf('.jpg') > -1 || file_name.lastIndexOf('.png') > -1 || file_name.lastIndexOf('.gif') > -1) {
+            temp_img_url_arr.push("https://pet-store-1256628689.cos.ap-chengdu.myqcloud.com/" + file_name);
+          } else if (file_name.lastIndexOf('.mp4') > -1 || file_name.lastIndexOf('.avi') > -1 || file_name.lastIndexOf('.rmvb') > -1 || file_name.lastIndexOf('.flash') > -1 || file_name.lastIndexOf('.mkv') > -1) {
+            temp_vedio_url_arr.push("https://pet-store-1256628689.cos.ap-chengdu.myqcloud.com/" + file_name)
+          }
+        }
+        that.setData({
+          img_url_list: temp_img_url_arr,
+          vedio_url_list: temp_vedio_url_arr
+        })
+      },
+      fail: function (error) {
+      }
+    })
   },
   getUserInfo: function (e) {
     console.log(e)
@@ -74,16 +74,16 @@ Page({
   },
   getMap: function (e) {
     wx.openLocation({
-      latitude: 34.52568,
-      longitude: 108.82803,
+      latitude: 34.525887,
+      longitude: 108.816793,
       scale: 18,
-      name: '马可波罗瓷砖',
-      address: '泾阳县中心街西关小学向西20米'
+      name: '咸亨畜禽康复中心',
+      address: '泾阳县蒙家桥十字东南角'
     })
   },
   clickPhone: function () {
     wx.makePhoneCall({
-      phoneNumber: '02936228486'
+      phoneNumber: '13335433542'
     })
   },
   clickImage: function (event) {
